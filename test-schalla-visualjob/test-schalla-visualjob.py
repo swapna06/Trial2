@@ -45,7 +45,7 @@ schema = StructType(
         StructField("entityTypes", ArrayType(StringType(), True)),
     ]
 )
-# data_frame
+# data_frame test new comment
 data_frame = spark.createDataFrame(data=items, schema=schema)
 DetectSensitiveData_node1687295371089 = DynamicFrame.fromDF(
     data_frame, glueContext, "df_for_pii"
