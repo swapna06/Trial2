@@ -29,7 +29,6 @@
   "numberOfWorkers" : 10,
   "workerType" : "G.1X",
   "executionClass" : "STANDARD",
-  "codeGenConfigurationNodes" : "{\"node-1687295371089\":{\"PIIDetection\":{\"EntityTypesToDetect\":[],\"Inputs\":[\"node-1687295220122\"],\"Name\":\"Detect Sensitive Data\",\"OutputColumnName\":\"DetectedEntities\",\"PiiType\":\"ColumnAudit\",\"SampleFraction\":1.0,\"ThresholdFraction\":0.1}},\"node-1687295220122\":{\"S3JsonSource\":{\"AdditionalOptions\":{\"EnableSamplePath\":false,\"SamplePath\":\"\"},\"Exclusions\":[],\"JsonPath\":\"\",\"Multiline\":false,\"Name\":\"Amazon S3\",\"Paths\":[\"s3://test-glue-schalla-iad\"],\"Recurse\":true}},\"node-1687295476630\":{\"S3JsonSource\":{\"AdditionalOptions\":{\"EnableSamplePath\":false,\"SamplePath\":\"\"},\"Exclusions\":[],\"JsonPath\":\"\",\"Multiline\":false,\"Name\":\"Amazon S3\",\"Paths\":[\"s3://test-glue-schalla-iad\"],\"Recurse\":true}}}",
   "sourceControlDetails" : {
     "provider" : "GITHUB",
     "repository" : "Trial2",
