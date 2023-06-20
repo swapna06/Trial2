@@ -1,0 +1,39 @@
+{
+  "name" : "test-schalla-visualjob",
+  "description" : "",
+  "role" : "arn:aws:iam::590186200215:role/Admin",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 1
+  },
+  "command" : {
+    "name" : "glueetl",
+    "scriptLocation" : "s3://aws-glue-assets-590186200215-us-east-1/scripts/test-schalla-visualjob.py",
+    "pythonVersion" : "3"
+  },
+  "defaultArguments" : {
+    "--enable-metrics" : "true",
+    "--enable-spark-ui" : "true",
+    "--spark-event-logs-path" : "s3://aws-glue-assets-590186200215-us-east-1/sparkHistoryLogs/",
+    "--enable-job-insights" : "true",
+    "--enable-glue-datacatalog" : "true",
+    "--enable-continuous-cloudwatch-log" : "true",
+    "--job-bookmark-option" : "job-bookmark-disable",
+    "--job-language" : "python",
+    "--TempDir" : "s3://aws-glue-assets-590186200215-us-east-1/temporary/"
+  },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 10,
+  "timeout" : 2880,
+  "maxCapacity" : 10.0,
+  "glueVersion" : "3.0",
+  "numberOfWorkers" : 10,
+  "workerType" : "G.1X",
+  "executionClass" : "STANDARD",
+  "codeGenConfigurationNodes" : "{\"node-1687295371089\":{\"PIIDetection\":{\"EntityTypesToDetect\":[],\"Inputs\":[\"node-1687295220122\"],\"Name\":\"Detect Sensitive Data\",\"OutputColumnName\":\"DetectedEntities\",\"PiiType\":\"ColumnAudit\",\"SampleFraction\":1.0,\"ThresholdFraction\":0.1}},\"node-1687295220122\":{\"S3JsonSource\":{\"AdditionalOptions\":{\"EnableSamplePath\":false,\"SamplePath\":\"\"},\"Exclusions\":[],\"JsonPath\":\"\",\"Multiline\":false,\"Name\":\"Amazon S3\",\"Paths\":[\"s3://test-glue-schalla-iad\"],\"Recurse\":true}},\"node-1687295476630\":{\"S3JsonSource\":{\"AdditionalOptions\":{\"EnableSamplePath\":false,\"SamplePath\":\"\"},\"Exclusions\":[],\"JsonPath\":\"\",\"Multiline\":false,\"Name\":\"Amazon S3\",\"Paths\":[\"s3://test-glue-schalla-iad\"],\"Recurse\":true}}}",
+  "sourceControlDetails" : {
+    "provider" : "GITHUB",
+    "repository" : "Trial2",
+    "branch" : "integ",
+    "folder" : "test-schalla-visualjob"
+  }
+}
