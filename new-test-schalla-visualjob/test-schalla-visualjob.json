@@ -1,6 +1,6 @@
 {
   "name" : "test-schalla-visualjob",
-  "description" : "",
+  "description" : "pullFromGitRepoTest",
   "role" : "arn:aws:iam::590186200215:role/Admin",
   "executionProperty" : {
     "maxConcurrentRuns" : 1
