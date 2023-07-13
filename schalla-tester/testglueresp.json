@@ -1,5 +1,5 @@
 {
-  "name" : "test-job-schalla-copy-copy",
+  "name" : "testglueresp",
   "description" : "",
   "role" : "arn:aws:iam::590186200215:role/Admin",
   "executionProperty" : {
@@ -29,11 +29,5 @@
   "numberOfWorkers" : 10,
   "workerType" : "G.1X",
   "executionClass" : "STANDARD",
-  "codeGenConfigurationNodes" : "{\"node-1684528275795\":{\"S3CatalogTarget\":{\"Database\":\"destdb\",\"Inputs\":[\"node-1684528061225\"],\"Name\":\"AWS Glue Data Catalog\",\"PartitionKeys\":[],\"SchemaChangePolicy\":{\"EnableUpdateCatalog\":false},\"Table\":\"source_destdb\"}},\"node-1684528061225\":{\"PIIDetection\":{\"EntityTypesToDetect\":[\"CANADA_DRIVING_LICENSE\",\"CANADA_GOVERNMENT_IDENTIFICATION_CARD_NUMBER\",\"CANADA_PASSPORT_NUMBER\",\"CANADA_PERMANENT_RESIDENCE_NUMBER\",\"CANADA_PERSONAL_HEALTH_NUMBER\",\"CANADA_SOCIAL_INSURANCE_NUMBER\"],\"Inputs\":[\"node-1684528507195\"],\"MaskValue\":\"\",\"Name\":\"Detect Canada Sensitive Data\",\"OutputColumnName\":\"DetectedEntities\",\"PiiType\":\"ColumnHashing\",\"SampleFraction\":0.24,\"ThresholdFraction\":0.02}},\"node-1684528507195\":{\"S3CsvSource\":{\"AdditionalOptions\":{\"EnableSamplePath\":false,\"SamplePath\":\"s3://anshms-pii-test/Maryland_State_Agency_Contact_Information(1).csv\"},\"Escaper\":\"\",\"Exclusions\":[],\"Name\":\"Amazon S3\",\"OptimizePerformance\":false,\"Paths\":[\"s3://anshms-pii-test\"],\"QuoteChar\":\"quote\",\"Recurse\":true,\"Separator\":\"comma\",\"WithHeader\":true}}}",
-  "sourceControlDetails" : {
-    "provider" : "GITHUB",
-    "repository" : "Trial2",
-    "branch" : "master",
-    "folder" : "test-job-schalla-copy-copy"
-  }
+  "codeGenConfigurationNodes" : "{\"node-1684528275795\":{\"S3CatalogTarget\":{\"Database\":\"destdb\",\"Inputs\":[\"node-1684528061225\"],\"Name\":\"AWS Glue Data Catalog\",\"PartitionKeys\":[],\"SchemaChangePolicy\":{\"EnableUpdateCatalog\":false},\"Table\":\"source_destdb\"}},\"node-1684528061225\":{\"PIIDetection\":{\"EntityTypesToDetect\":[\"CANADA_DRIVING_LICENSE\",\"CANADA_GOVERNMENT_IDENTIFICATION_CARD_NUMBER\",\"CANADA_PASSPORT_NUMBER\",\"CANADA_PERMANENT_RESIDENCE_NUMBER\",\"CANADA_PERSONAL_HEALTH_NUMBER\",\"CANADA_SOCIAL_INSURANCE_NUMBER\"],\"Inputs\":[\"node-1684528507195\"],\"MaskValue\":\"\",\"Name\":\"Detect Canada Sensitive Data\",\"OutputColumnName\":\"DetectedEntities\",\"PiiType\":\"ColumnHashing\",\"SampleFraction\":0.24,\"ThresholdFraction\":0.02}},\"node-1684528507195\":{\"S3CsvSource\":{\"AdditionalOptions\":{\"EnableSamplePath\":false,\"SamplePath\":\"s3://anshms-pii-test/Maryland_State_Agency_Contact_Information(1).csv\"},\"Escaper\":\"\",\"Exclusions\":[],\"Name\":\"Amazon S3\",\"OptimizePerformance\":false,\"Paths\":[\"s3://anshms-pii-test\"],\"QuoteChar\":\"quote\",\"Recurse\":true,\"Separator\":\"comma\",\"WithHeader\":true}}}"
 }
