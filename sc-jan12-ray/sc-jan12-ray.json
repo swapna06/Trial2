@@ -1,0 +1,30 @@
+{
+  "name" : "sc-jan12-ray",
+  "jobMode" : "SCRIPT",
+  "description" : "",
+  "role" : "arn:aws:iam::590186200215:role/service-role/AWSGlueServiceRole",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 1
+  },
+  "command" : {
+    "name" : "glueray",
+    "scriptLocation" : "s3://aws-glue-assets-590186200215-us-east-1/scripts/sc-jan12-ray.py",
+    "pythonVersion" : "3.9",
+    "runtime" : "Ray2.4"
+  },
+  "defaultArguments" : { },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 6,
+  "timeout" : 480,
+  "maxCapacity" : 6.0,
+  "glueVersion" : "4.0",
+  "numberOfWorkers" : 3,
+  "workerType" : "Z.2X",
+  "executionClass" : "STANDARD",
+  "sourceControlDetails" : {
+    "provider" : "GITHUB",
+    "repository" : "Trial2",
+    "branch" : "integ",
+    "folder" : "sc-jan12-ray"
+  }
+}
