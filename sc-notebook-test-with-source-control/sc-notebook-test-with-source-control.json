@@ -1,7 +1,7 @@
 {
   "name" : "sc-notebook-test-with-source-control",
   "jobMode" : "SCRIPT",
-  "description" : "",
+  "description" : "Adding this desc to test nb stuff",
   "role" : "arn:aws:iam::590186200215:role/AWSGlueNotebookRole",
   "executionProperty" : {
     "maxConcurrentRuns" : 1
